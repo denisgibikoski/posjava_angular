@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.css";
+@import "font-awesome/css/font-awesome.css";
+
+.centralizar{
+    display: flex;
+    /* centralizar horizontalmente */
+    justify-content: center;
+}
+
+.tamanhoImagem{
+    width: 100px;
+    height: 100px;
+}

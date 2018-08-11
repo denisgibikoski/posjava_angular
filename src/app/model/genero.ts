@@ -1,7 +1,4 @@
-export class Genero {
-  id: number;
-  nome: string;
-
-
+export class Genero{
+    id:number;
+    nome:string;
 }
-

@@ -13,6 +13,9 @@ import { FotoComponent } from './foto/foto.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { GeneroComponent } from './genero/genero.component';
+import { GeneroListaComponent } from './genero-lista/genero-lista.component';
+import { GeneroService } from './genero/genero.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
     PrincipalComponent,
     CardComponent,
     BotaoComponent,
-    FotoComponent
+    FotoComponent,
+    GeneroComponent,
+    GeneroListaComponent
     
   ],
   imports: [
@@ -35,6 +40,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ],
   providers: [
+    GeneroService
   ],
   bootstrap: [AppComponent]
 })

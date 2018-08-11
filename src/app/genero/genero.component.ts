@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneroComponent implements OnInit {
 
+  titulo = "Gênero - Cadastro"
+
   constructor() { }
 
   ngOnInit() {

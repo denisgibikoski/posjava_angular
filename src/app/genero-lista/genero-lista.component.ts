@@ -12,14 +12,19 @@ export class GeneroListaComponent implements OnInit {
   titulo = "Gênero - Lista"
   generos: Genero[];
 
-  constructor(private generoService : GeneroService) { }
+  constructor(private generoService: GeneroService) { }
 
   ngOnInit() {
     this.findAll();
   }
 
-  findAll(){
+  findAll() {
     this.generoService.findAll().subscribe(e => this.generos = e);
+  }
+  remover(id: number) {
+    this.generoService.delete(id).subscribe(() => {
+      this.findAll();
+    });
   }
 
 }

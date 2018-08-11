@@ -1,6 +1,8 @@
 <div class="container">
   <h1 class="label label-light">{{titulo}}</h1>
 
+  <a routerLink="/genero/new" class="btn btn-primary">Novo</a>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -12,6 +14,10 @@
       <tr *ngFor="let genero of generos">
         <td>{{genero.id}}</td>
         <td>{{genero.nome}}</td>
+        <td>
+          <a [routerLink]="['/genero',genero.id]" class="btn btn-success">Editar</a>
+          <a (click)="remover(genero.id)" class="btn btn-danger">Remover</a>
+        </td>
       </tr>
     </tbody>
   </table>
